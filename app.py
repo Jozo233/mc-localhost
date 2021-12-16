@@ -30,7 +30,7 @@ if answer == user:
 
         if answer == "1": 
 
-            print("Jaký mám používat?")
+            print("Jaký mám používat port?")
             port = input() 
 
             print("Pro kolik hráčů má být server?")
