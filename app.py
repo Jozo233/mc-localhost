@@ -103,7 +103,7 @@ if answer == user:
             print("Server  properities byl úspěšně vygenerován")
 
 
-        if answer == "2": # Pokud je odpověď 2
+        if answer == "2": 
 
             print("[1] Zapnout server.  RAM: 1024MB")
             print("[2] Zapnout server.  RAM: 2048MB")
@@ -137,7 +137,7 @@ if answer == user:
                 print("Spouštím server")
                 os.system('java -Xms128M -Xmx5120M -jar server.jar nogui') 
 
-            if answer == "6": # Pokud je odpověď 6
+            if answer == "6": 
                 print("Spouštím server")
                 os.system('java -Xms128M -Xmx6144M -jar server.jar nogui') 
                 
