@@ -1,5 +1,5 @@
 # mc-localhost
-Aplikace na zpuštění mc serveru na localhostu
+Aplikace na spuštění mc serveru na localhostu
 
 ### Jak začít?
 1) Stáhneme všechny složky a vložíme do složky se serverem
