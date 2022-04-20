@@ -22,11 +22,11 @@ if answer == user:
         print("|                         |")
         print("---------------------------")
 
-        print("[1] Vygenerovat server properities")
+        print("[1] Vygenerovat server.properities")
         print("[2] Spustit server")
         print("[3] Odhlásit se")
 
-        answer = input("Zvol to co mám dělat: ")
+        answer = input("Zvol, co mám udělat: ")
 
         if answer == "1": 
 
@@ -36,7 +36,7 @@ if answer == user:
             print("Pro kolik hráčů má být server?")
             sloty = input() 
 
-            print("Varez hráči treu/false?")
+            print("Warez hráči true/false?")
             onlinemod = input() 
 
             file = open('server.properties', 'w')
@@ -100,7 +100,7 @@ if answer == user:
 
             file.close() 
 
-            print("Server  properities byl úspěšně vygenerován")
+            print("server.properities byl úspěšně vygenerován")
 
 
         if answer == "2": 
@@ -159,4 +159,4 @@ if answer == user:
         print("Špatné heslo")
     
 else: 
-    print("Účet není nalezen")
+    print("Účet nebyl nalezen")
