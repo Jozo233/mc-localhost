@@ -39,66 +39,59 @@ if answer == user:
             print("Warez hráči true/false?")
             onlinemod = input() 
 
-            file = open('server.properties', 'w')
-
-            file.write('enable-jmx-monitoring=false \n')
-            file.write('rcon.port=41671 \n')
-            file.write('level-seed= \n')
-            file.write('enable-command-block=true \n')
-            file.write('gamemode=survival \n')
-            file.write('enable-query=true \n')
-            file.write('generator-settings= \n')
-            file.write('level-name=world \n')
-            file.write('motd= \n')
-            file.write('query.port=' + port) 
-            file.write(' \n')
-            file.write('pvp=true \n')
-            file.write('generate-structures=true \n')
-            file.write('difficulty=easy \n')
-            file.write('network-compression-threshold=256 \n')
-            file.write('max-tick-time=60000 \n')
-            file.write('max-players=' + sloty) 
-            file.write('\n')
-            file.write('use-native-transport=true \n')
-            file.write('enable-status=true \n')
-            file.write('online-mode=' + onlinemod) 
-            file.write('\n')
-            file.write('allow-flight=true \n')
-            file.write('broadcast-rcon-to-ops=true \n')
-            file.write('view-distance=5 \n')
-            file.write('max-build-height=256 \n')
-            file.write('server-ip= \n')
-            file.write('allow-nether=true \n')
-            file.write('server-port=' + port) 
-            file.write('\n')
-            file.write('sync-chunk-writes=true \n')
-            file.write('enable-rcon=false \n')
-            file.write('op-permission-level=4 \n')
-            file.write('prevent-proxy-connections=false \n')
-            file.write('resource-pack= \n')
-            file.write('entity-broadcast-range-percentage=100 \n')
-            file.write('player-idle-timeout=0 \n')
-            file.write('rcon.password= \n')
-            file.write('force-gamemode=false \n')
-            file.write('debug=false \n')
-            file.write('rate-limit=0 \n')
-            file.write('hardcore=false \n')
-            file.write('white-list=false \n')
-            file.write('broadcast-console-to-ops=true \n')
-            file.write('spawn-npcs=true \n')
-            file.write('spawn-animals=true \n')
-            file.write('snooper-enabled=true \n')
-            file.write('function-permission-level=2 \n')
-            file.write('level-type=default \n')
-            file.write('text-filtering-config= \n')
-            file.write('spawn-monsters=true \n')
-            file.write('enforce-whitelist=false \n')
-            file.write('spawn-protection=0 \n')
-            file.write('resource-pack-sha1= \n')
-            file.write('max-world-size=29999984 \n')
-            file.write('# make by MC-LOCALHSOT')
-
-            file.close() 
+            with open("server.properties", "w") as file:
+                file.write(f"""enable-jmx-monitoring=false 
+rcon.port=41671 
+level-seed= 
+enable-command-block=true 
+gamemode=survival 
+enable-query=true 
+generator-settings= 
+level-name=world 
+motd= 
+query.port={port}
+pvp=true 
+generate-structures=true 
+difficulty=easy 
+network-compression-threshold=256 
+max-tick-time=60000 
+max-players={sloty}
+use-native-transport=true 
+enable-status=true 
+online-mode={onlinemod}
+allow-flight=true 
+broadcast-rcon-to-ops=true 
+view-distance=5 
+max-build-height=256 
+server-ip= 
+allow-nether=true 
+server-port={port}
+sync-chunk-writes=true 
+enable-rcon=false 
+op-permission-level=4 
+prevent-proxy-connections=false 
+resource-pack= 
+entity-broadcast-range-percentage=100 
+player-idle-timeout=0 
+rcon.password= 
+force-gamemode=false 
+debug=false 
+rate-limit=0 
+hardcore=false 
+white-list=false 
+broadcast-console-to-ops=true 
+spawn-npcs=true 
+spawn-animals=true 
+snooper-enabled=true 
+function-permission-level=2 
+level-type=default 
+text-filtering-config= 
+spawn-monsters=true 
+enforce-whitelist=false 
+spawn-protection=0 
+resource-pack-sha1= 
+max-world-size=29999984 
+# make by MC-LOCALHSOT""")
 
             print("server.properities byl úspěšně vygenerován")
 
