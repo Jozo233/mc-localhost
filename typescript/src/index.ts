@@ -1,5 +1,6 @@
 import { Command } from 'commander';
 import { readFile } from 'node:fs/promises';
+import process from 'node:process';
 
 import setup from './commands/setup';
 
@@ -10,10 +11,7 @@ const version = JSON.parse(await readFile(packajeJson, 'utf-8')).version;
 
 mclocalhost.version(version);
 
-mclocalhost
-    .command('setup')
-    .description('Setup your server')
-    .action(setup);
+mclocalhost.command('setup').description('Setup your server').action(setup);
 
 // TODO: RUN
 

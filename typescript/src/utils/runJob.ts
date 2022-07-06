@@ -6,13 +6,13 @@ export default (job: () => Promise<any>, message) => {
 		const spinner = ora(message).start();
 
 		return job()
-			.then((data) => {
+			.then(data => {
 				spinner.succeed();
 
 				if (typeof data !== 'boolean') resolve(data);
 				else resolve(true);
 			})
-			.catch((e) => {
+			.catch(e => {
 				spinner.fail(e);
 				reject(e);
 			});
